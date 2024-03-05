@@ -7,11 +7,13 @@ var userClickedPattern = [];
 var started = false;
 var level = 0;
 
-$(document).keypress(function() {
+
+$("#startButton").on("click", function() {
   if (!started) {
     $("#level-title").text("Niveau " + level);
     nextSequence();
     started = true;
+    $(this).hide(); 
   }
 });
 
@@ -37,17 +39,21 @@ function checkAnswer(currentLevel) {
     } else {
       playSound("loose");
       $("body").addClass("game-over");
-      $("#level-title").text("Recommence si tu l'oses").css("color" , "red");
+      $("#level-title").text("Looozer").css("color" , "red");
+      
 
       setTimeout(function () {
         $("body").removeClass("game-over");
         $("#level-title").text("Tu recommmences ou t'es un naze???").css("color" , "red");
-      }, 2000);
+      }, 1000);
+      $("#restartButton").show();
       
 
-      startOver();
+  
     }
 }
+
+
 
 
 function nextSequence() {
@@ -79,3 +85,8 @@ function startOver() {
   gamePattern = [];
   started = false;
 }
+$("#restartButton").click(function() {
+  location.reload(); 
+});
+
+

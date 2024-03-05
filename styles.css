@@ -35,29 +35,48 @@ body {
 
 .red {
   background-color: red;
-  -webkit-box-shadow: -5px 10px 5px 5px #FFC012;
-box-shadow: -5px 10px 5px 5px #FFC012;
+
 }
 
 .green {
   background-color: green;
-  -webkit-box-shadow: 5px 5px 5px 5px #FFC012;
-box-shadow: 5px 10px 5px 5px #FFC012;
+
 }
 
 .blue {
   background-color: blue;
-  -webkit-box-shadow: -5px -10px 5px 5px #FFC012;
-box-shadow: -5px -10px 5px 5px #FFC012;
+
 }
 
 .yellow {
   background-color: yellow;
-  -webkit-box-shadow: 5px -10px 5px 5px #FFC012;
-box-shadow: 5px -10px 5px 5px #FFC012;
+
 }
 
 .pressed {
   box-shadow: 0 0 20px white;
   background-color: grey;
+}
+#startButton {
+  font-family: 'Press Start 2P';
+  margin: 25px;
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  border: 10px solid black;
+  border-radius: 20%;
+  background-color: orange;
+  font-size: large;
+}
+
+#restartButton {
+  font-family: 'Press Start 2P';
+  margin: 25px;
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  border: 10px solid black;
+  border-radius: 20%;
+  background-color: whitesmoke;
+  font-size: medium;
 }
